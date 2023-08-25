@@ -1,0 +1,52 @@
+Yiwen Wang Homework 11 Test Plan
+==========================================
+
+class board_cell:
+    tested the constructor, the parameters passed in are set properly. 
+    for this class did not find any bugs while testing.
+    
+class Checker:
+    constructor: the parameters passed in are set properly. 
+    update(): 
+        valid inputs: a display method, tested by checking whether the checker is showing properly. 
+    move(): 
+        valid inputs: tested by draging the checker with mouse, the checker should be able to be moved. 
+    is_king(): 
+        valid inputs: placed the checker to the cell where the checker can turn to a king, the checker then gets a crown. 
+        invalid inputs: The checker is placed in a cell where it should not turn to a king, the checker did not get a crown.
+    set_to_king(): same as the above method.
+    for this class did not find any bugs while testing.
+
+class chess_board:
+    constructor: the parameters passed in are set properly. 
+    update(): 
+        valid inputs: a display method, checked if the board and checkers are showing properly
+    move_checker(): 
+        valid inputs: the checker can be placed in the achievable cells, cannot be placed in other cells.
+    achievable(): this method can be test together with the method above.
+    can_move(): this method will be tested when the logic of the game is done. Basically check if a player wins when the other player cannot move any checkers.
+    king(): 
+        valid inputs: when the checker was place in a cell that it should turn to a king, it turned to a king. 
+        invalid inputs: when the checker was placed in a cell that it should not turn to a king, it did not turn to a king. 
+    place_checker(): 
+        valid inputs: when the checker was placed on a achievable cell, it stayed. 
+        invalid inputs: when the checker was placed on a not achievable cell, it returned to the cell where it was from.
+    is_valid_move(): this method was tested together with the method above.
+    pixel_to_index():
+        valid inputs: the checker was grabbed by the mouse successfully. 
+    pick_checker():
+        valid inputs: the checker was grabbed by the mouse successfully. 
+    find_checker_at_pos():
+        valid inputs: the checker was grabbed by the mouse successfully. 
+    for this class the crown was showing in a wrong position comparing to the checker, so fixed it by changing the coordinates of the crown.
+
+class GameController:
+    constructor: the parameters passed in are set properly. 
+    update(): tested with chess_board.update()
+
+    place_checker(): tested with chess_board.place_checker()
+
+    pick_checker(): tested with chess_board.pick_checker()
+
+class GameManager():
+    this class will have the logic of the game, will test the methos when HW12 is done.

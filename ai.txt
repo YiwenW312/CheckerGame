@@ -1,0 +1,7 @@
+1. yes, tried to make computer player to check steps a head before make a move.
+2. No, current version only supports the computer to make a jump when any of the checkers can jump
+3. check all the checkers, if some of them can jump, then randomly pick one, and jump. if the checker 
+can jump in more than one ways, then ramdomly choose one. if no checkers can jump, than ramdomly pick 
+one and make a regular move.
+4. for myself, I lose more than I win. 
+5. To make the AI learn to predict multiple steps ahead, then decide what move to take.

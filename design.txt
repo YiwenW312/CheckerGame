@@ -1,0 +1,175 @@
+Yiwen Wang Homework 11 Design Plan
+===================================
+Pseudocode:
+==================
+game_controller.py
+==================
+class GameController():
+    """A gamecontroller for chess game"""
+
+    def __init__(self):
+        """constructor"""
+        GameManager
+
+    def start_game(self):
+        """start the game"""
+        GameManager.start()
+
+    def end_game(self):
+        """end the game"""
+        check GameManager.result
+
+==================
+chess_board.py
+==================
+class ChessBoard():
+    """set up chess board"""
+    def __init__(self, BOARD_SIZE):
+        """constructor for the board"""
+        checker_list[] # a list of checkers with x and y of their position, and whether it belongs to human or computer
+        init_board(BOARD_SIZE)
+
+    def init_board(self, BOARD_SIZE):
+        """set up a new board, and put checkers on their positions"""
+        draw a borad with the size of BOARD_SIZE * BOARD_SIZE
+
+        initialize all checkes on the board. based on the row % 2, i.e. whether the row number is odd or even, place 
+        the checkers starting from index 0 or 1 in the columns. 
+
+    def move_checker(self, checker, x, y):
+        """move checkers"""
+        # first get the list of achievable positions
+        achievable_list = achievable(self, checker):
+        
+        inList = check if the new position with x and y are in the achievable_list
+        if inList:
+            move the checker to the new position, return true
+        else:
+            return false
+
+    def achievable(self, checker, player):
+        """return a list of achievable cells"""
+        achievable_list = []
+        check all the positons on the board, if the position is achievable for the checker, put it in the list
+        return the list
+
+    def can_move(self, player):
+        for checker in checker_list:
+            if checker.player == player:
+                if len(achievable(checker, player)) > 0
+                    return true
+        return false
+
+    def king(self, checker):
+        """make a checker into king"""
+        if the checker is in the right position
+            make the checker as king
+
+
+===========
+checker.py
+===========
+class Checker():
+    """checker"""
+    x
+    y
+    isKing
+    player # belongs to computer or human
+
+    def __init__(self, x, y):
+        """constructor"""
+        initialize a checker with the position x, y on the board
+
+    def move(self, x, y):
+    """update the positon of the checker"""
+        self.x = x
+        self.y = y
+
+    def is_king():
+        """check if a checker is king"""
+        return isKing
+
+    def set_to_king():
+        isKing = true
+
+===============
+game_manager.py
+===============
+class GameManager():
+
+    def __init__():
+        moves # the number of moves
+        result
+        ChessBoard
+
+    def start():
+        player_make_move()
+
+    def player_make_move():
+        ask the player to make the move, with the checker, x, y of new positon
+        success = ChessBoard.move_checker(checker, x, y)
+        if success:
+            moves += 1
+            if check_result(move):
+                if finalize_move(human): # finalize_move will decide whether to continue the game or not
+                    computer_make_move()
+                else:
+                    check_result(human)
+        else:
+            player_make_move()
+
+    def computer_make_move():
+        achievable_list = ChessBoard.achievable()
+        pick one position from achievable_list
+        ChessBoard.move_checker(checker, x, y) # x y from the positon picked above
+        if check_result(move):
+            if finalize_move(computer):
+                player_make_move()
+            else:
+                check_result(computer)
+
+    def finalize_move(player):
+        if player == human:
+            if computer_can_move():
+                return true
+            return false
+        else: # player == computer:
+            if human_can_move():
+                return true
+            return false
+
+    def computer_can_move():
+    """check if computer has checkers that can be moved"""
+        return ChessBoard.can_move(computer)
+
+    def human_can_move():
+    """check if human has checkers that can be moved"""
+        return ChessBoard.can_move(human)
+
+    def check_result(player):
+        #check if moves hit 50
+        if player == move:
+            if self.moves < 50:
+                return true
+        return false
+        elif player == human:
+            human wins
+        else player == computer:
+            computer wins
+
+================
+board_cell.py
+================
+class BoardCell:
+"""draw a boardcell"""
+    def __init__(self, x, y, CELL_SIZE, color):
+        self.x = x
+        self.y = y
+        self.CELL_SIZE = CELL_SIZE
+        self.color = color
+
+    def update(self):
+        noStroke()
+
+        fill(*self.color)
+        rect(self.x, self.y, self.CELL_SIZE, self.CELL_SIZE)
