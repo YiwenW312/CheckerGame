@@ -14,3 +14,5 @@ A few additional rules are as follows:
 2. If a jump opportunity presents itself, the jump must be taken. If more than one jump opportunity presents itself at once, then the player can choose which jump to make. If multiple jumps can be made in sequence with the same piece, all possible jumps must be made, resulting in double or triple (or more) jumps.
 3. If a player is unable to make a legal move, that player loses.
 4. If 50 moves pass without any jumps occurring, the result is a draw.
+
+![Board Demo](https://github.com/YiwenW312/CheckerGame/blob/main/checkergameDemo.png)
