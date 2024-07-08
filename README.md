@@ -1,7 +1,19 @@
-# The Game of Checkers
+# The Game of Checkers - Backend Python Application with GUI
 A final project - Checker Game in python, using processing for CS5001 Intensive Foundations of CS in Spring 2023
 
-## Summary
+# Project Overview
+- Developed an interactive 2-player chess game in Python with a GUI using the Processing library, implementing comprehensive chess rules and an intuitive drag-and-drop interface.
+
+- Role: Developer
+
+- Technologies Used: Python, Processing
+
+# Key Contributions and Achievements
+- Developed the game logic and GUI, ensuring smooth gameplay and visual feedback for users.
+- Implementing complex game rules and providing visual hints for potential moves.
+- Enhanced user experience with visual hints for potential moves and automatic detection of check and checkmate scenarios.
+
+# Summary
 
 This project is a graphical game of Checkers in **Python/Processing**, from scratch. 
 
